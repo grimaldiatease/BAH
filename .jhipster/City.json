@@ -1,0 +1,40 @@
+{
+  "applications": ["bookingservice"],
+  "changelogDate": "20230227074636",
+  "clientRootFolder": "bookingservice",
+  "databaseType": "sql",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "city",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "description",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "microserviceName": "bookingservice",
+  "name": "City",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "state",
+      "otherEntityRelationshipName": "city",
+      "relationshipName": "state",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "bahRate",
+      "otherEntityRelationshipName": "city",
+      "relationshipName": "bahRate",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "service": "serviceClass"
+}

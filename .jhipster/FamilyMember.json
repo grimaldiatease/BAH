@@ -1,0 +1,39 @@
+{
+  "applications": ["bookingservice"],
+  "changelogDate": "20230227074640",
+  "clientRootFolder": "bookingservice",
+  "databaseType": "sql",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "family_member",
+  "fields": [
+    {
+      "fieldName": "fullname",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "dob",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "relation",
+      "fieldType": "Relation",
+      "fieldValues": "SON,WIFE"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "microserviceName": "bookingservice",
+  "name": "FamilyMember",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "guest",
+      "otherEntityRelationshipName": "familyMember",
+      "relationshipName": "guest",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "serviceClass"
+}

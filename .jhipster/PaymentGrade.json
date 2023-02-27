@@ -1,0 +1,44 @@
+{
+  "applications": ["bookingservice"],
+  "changelogDate": "20230227074633",
+  "clientRootFolder": "bookingservice",
+  "databaseType": "sql",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "payment_grade",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "series",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "description",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "microserviceName": "bookingservice",
+  "name": "PaymentGrade",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "guest",
+      "otherEntityRelationshipName": "paymentGrade",
+      "relationshipName": "guest",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "bahRate",
+      "otherEntityRelationshipName": "paymentGrade",
+      "relationshipName": "bahRate",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "service": "serviceClass"
+}
