@@ -1,0 +1,34 @@
+{
+  "applications": ["bookingservice"],
+  "changelogDate": "20230227071633",
+  "clientRootFolder": "bookingservice",
+  "databaseType": "sql",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "installation",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "description",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "microserviceName": "bookingservice",
+  "name": "Installation",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "guest",
+      "otherEntityRelationshipName": "installation",
+      "relationshipName": "guest",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "serviceClass"
+}

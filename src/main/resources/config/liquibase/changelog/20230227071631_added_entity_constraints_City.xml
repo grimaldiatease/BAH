@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+    <!--
+        Added the constraints for entity City.
+    -->
+    <changeSet id="20230227071631-2" author="jhipster">
+
+        <addForeignKeyConstraint baseColumnNames="state_id"
+                                 baseTableName="city"
+                                 constraintName="fk_city__state_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="state"/>
+
+        <addForeignKeyConstraint baseColumnNames="bah_rate_id"
+                                 baseTableName="city"
+                                 constraintName="fk_city__bah_rate_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="bah_rate"/>
+    </changeSet>
+</databaseChangeLog>
