@@ -1,0 +1,40 @@
+{
+  "applications": ["bookingservice"],
+  "changelogDate": "20230227071629",
+  "clientRootFolder": "bookingservice",
+  "databaseType": "sql",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "bah_rate",
+  "fields": [
+    {
+      "fieldName": "amount",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "name",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "microserviceName": "bookingservice",
+  "name": "BahRate",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "paymentGrade",
+      "otherEntityRelationshipName": "bahRate",
+      "relationshipName": "paymentGrade",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "city",
+      "otherEntityRelationshipName": "bahRate",
+      "relationshipName": "city",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "service": "serviceClass"
+}
