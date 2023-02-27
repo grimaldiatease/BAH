@@ -1,0 +1,128 @@
+
+application {
+  config {
+    baseName bookingservice,
+    applicationType microservice,
+    packageName com.atease.booking,
+    authenticationType jwt,
+    prodDatabaseType mysql,
+    skipClient true 
+    serverPort 9003
+ 
+  }
+  entities *
+}
+/*
+application {
+  config {
+    baseName guestservice,
+    applicationType microservice,
+    packageName com.atease.guest,
+    authenticationType jwt,
+    prodDatabaseType mysql,
+    skipClient true 
+    serverPort 9002
+  }
+  entities Guest
+}
+*/
+
+
+
+entity PaymentGrade{
+ name String 
+ series String 
+ description String
+}
+
+entity BahRate{
+ amount Double
+ name String 
+
+}
+
+
+entity State
+{
+name String
+description String 
+
+
+}
+entity City
+{
+name String
+description String 
+
+
+}
+
+entity Guest {
+ firstName String
+ lastName String 
+ phone String
+ email String 
+ address1 String 
+ address2 String 
+ country String 
+ city String 
+ state  String 
+ zip String 
+
+ 
+ 
+}
+entity Installation
+
+{
+name String
+description String 
+
+
+}
+entity  Department 
+{
+name String
+description String 
+
+
+}
+
+entity  FamilyMember 
+{
+fullname String
+dob LocalDate 
+relation Relation
+
+
+}
+	
+relationship OneToMany {
+ PaymentGrade to Guest
+ State  to City
+ PaymentGrade to BahRate
+ City to BahRate
+ Installation to Guest
+ Department to Guest 
+ Guest to FamilyMember
+}
+
+enum Relation {
+SON,WIFE
+}
+
+/*
+
+
+relationship OneToOne {
+  
+
+}
+
+
+*/
+dto * with mapstruct 
+service * with serviceClass
+paginate *  with pagination
+
+    
